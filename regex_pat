@@ -5,6 +5,7 @@
 3) If a word has 'ch' or 'co', replace it with 'Ch' or 'Co'.
 4) If the pattern has characters 'ai' or 'hi', replace the next three characters with *\*.'''
 
+###############CODE#############
 
 poem = '''If I can stop one heart from breaking,
 I shall not live in vain;
