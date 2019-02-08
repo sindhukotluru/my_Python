@@ -1,0 +1,34 @@
+Consider sample data as follows: sample_data=range(1,11)
+
+Create two functions: odd() and even()
+The function even() returns a list of all the even numbers from sample_data
+The function odd() returns a list of all the odd numbers from sample_data
+
+Create a function sum_of_numbers() which will accept the sample data and/or a function.
+If a function is not passed, the sum_of_numbers() should return the sum of all the numbers from sample_data
+If a function is passed, the sum_of_numbers() should return the sum of numbers returned from the function passed.
+
+####################### CODE ###################
+
+def sum_of_numbers(data,func):
+    if func == odd:
+        oddlist=odd(data)
+        print(reduce((lambda x,y:x+y),oddlist))
+    elif func == even:
+        elist=even(data)
+        print(reduce((lambda x,y:x+y),elist))
+    else:
+        print(reduce((lambda x,y:x+y),data))
+        
+def even(data):
+    l2=[i for i in data if i%2 == 0]
+    return l2
+
+def odd(data):
+    l1= [i for i in data if i%2 != 0]
+    return l1
+
+data = range(1,11)
+sum_of_numbers(data,odd)
+sum_of_numbers(data,even)
+sum_of_numbers(data,None)
