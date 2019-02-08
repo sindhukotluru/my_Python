@@ -1,0 +1,15 @@
+'''Write a python function, check_anagram() which accepts two strings and returns True, if one string is an anagram of another string.
+Otherwise returns False.
+
+The two strings are considered to be an anagram if they contain repeating characters but none of
+the characters repeat at the same position. The length of the strings should be the same.'''
+
+###############CODE#################
+
+from collections import Counter
+
+def check_anagram(data1,data2):
+    return (Counter(data1) == Counter(data2))
+
+print(check_anagram("about","table"))
+print(check_anagram("eat","tea"))
